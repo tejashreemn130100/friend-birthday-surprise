@@ -3,41 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Nagesh!</title>
     <link rel="stylesheet" href="birthday-style.css">
+    <title>Birthday Surprise for Nagesh</title>
 </head>
 <body>
     <div class="container">
-        <h1>Happy Birthday, Nagesh!💕</h1>
-        <p>Wishing you a day filled with love, joy, and surprises!</p>
-        <audio autoplay loop>
-            <source src="birthday-song.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <h1>Happy Birthday Nagesh!</h1>
+        <p>We have a special message for you!</p>
 
-        <!-- Gift Box Section -->
-        <div class="gift-box" id="giftBox">
-            <div class="lid"></div>
+        <!-- Gift Box -->
+        <div class="gift-box">
             <div class="box"></div>
+            <div class="lid"></div>
             <div class="smiley">😊</div>
-            <div class ="hearts">🩷🧡💚💙🤍🩵❤️</div>
         </div>
 
-        <!-- Button to Show Kannada Poem -->
-        <button id="showPoemBtn">Click for a Special Surprise!</button>
-    </div>
-
-    <!-- Pop-up for Kannada Poem -->
-    <div id="poemPopup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <p id="kannadaPoem">
-                ನಿನ್ನ ನಗುವು ನನ್ನ ಹೃದಯದ ನಿಖರ, ನಿನ್ನ ಸ್ನೇಹದ ಹೂವು ನನ್ನ ಜೀವನದ ಆರಾಧನೆ. <br>
-                ಜನ್ಮದಿನದ ಶುಭಾಶಯಗಳು, ನನ್ನ ಪ್ರೀತಿಯ ಸ್ನೇಹಿತ! ❤️
-            </p>
+        <!-- New Button to Trigger Poem Pop-up -->
+        <button id="open-poem-btn" class="poem-btn">Click Here for a Friendship Poem</button>
+        
+        <!-- Poem Pop-up -->
+        <div id="poem-popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <p>ಆತ್ಮೀಯ ಸ್ನೇಹಿತ,</p>
+                <p>ಸ್ನೇಹದ ಬಾಂಧವ್ಯವು ಎಷ್ಟೋ ಅಮೂಲ್ಯ!</p>
+                <p>ನಿನ್ನಂತೊಬ್ಬ ಸ್ನೇಹಿತನೊಂದಿಗೆ, ಜೀವನ ಇನ್ನೂ ಸುಂದರ!</p>
+                <p>ನಿನ್ನೊಂದಿಗೆ ಹಂಚಿದ ನಗುವು, ಮರೆಯಲಾಗದ ನೆನಪು!</p>
+                <p>ಹಾಗೆಯೇ ಇರಲಿ ನಮ್ಮ ಸ್ನೇಹದ ಬಾಂಧವ್ಯ!</p>
+                <p>ಜೀವನದ ಪ್ರತಿಯೊಂದು ಕ್ಷಣದಲ್ಲೂ ನಿನ್ನ ಜೊತೆಗೆ!</p>
+            </div>
         </div>
-    </div>
 
-    <script src="birthday-script.js"></script>
+        <script src="birthday-script.js"></script>
+    </div>
 </body>
 </html>
