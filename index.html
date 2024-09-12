@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, [Nagesh]!</title>
+    <title>Happy Birthday, Nagesh!</title>
     <link rel="stylesheet" href="birthday-style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Happy Birthday, [nagi💕]!</h1>
+        <h1>Happy Birthday, Nagesh!💕</h1>
         <p>Wishing you a day filled with love, joy, and surprises!</p>
         <audio autoplay loop>
             <source src="birthday-song.mp3" type="audio/mpeg">
@@ -16,15 +16,26 @@
         </audio>
 
         <!-- Gift Box Section -->
-        <div class="gift-box">
+        <div class="gift-box" id="giftBox">
             <div class="lid"></div>
             <div class="box"></div>
-            <div class="smiley">❤️😊❤️</div>
+            <div class="smiley">😊</div>
+            <div class ="hearts">🩷🧡💚💙🤍🩵❤️</div>
         </div>
+
+        <!-- Button to Show Kannada Poem -->
+        <button id="showPoemBtn">Click for a Special Surprise!</button>
     </div>
 
-    <div class="animation">
-        <!-- You can add confetti or other decorative elements -->
+    <!-- Pop-up for Kannada Poem -->
+    <div id="poemPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p id="kannadaPoem">
+                ನಿನ್ನ ನಗುವು ನನ್ನ ಹೃದಯದ ನಿಖರ, ನಿನ್ನ ಸ್ನೇಹದ ಹೂವು ನನ್ನ ಜೀವನದ ಆರಾಧನೆ. <br>
+                ಜನ್ಮದಿನದ ಶುಭಾಶಯಗಳು, ನನ್ನ ಪ್ರೀತಿಯ ಸ್ನೇಹಿತ! ❤️
+            </p>
+        </div>
     </div>
 
     <script src="birthday-script.js"></script>
