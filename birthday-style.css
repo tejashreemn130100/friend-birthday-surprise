@@ -1,110 +1,24 @@
-/* General Styling */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: url('background1.jpg') no-repeat center center/cover;
-    animation: slidebg 30s infinite;
-    text-align: center;
+/* Style for the poem button */
+.poem-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
     color: #fff;
-}
-
-/* Background Slideshow */
-@keyframes slidebg {
-    0% { background-image: url('background1.jpg'); }
-    20% { background-image: url('background2.jpg'); }
-    40% { background-image: url('background3.jpg'); }
-    60% { background-image: url('background4.jpg'); }
-    80% { background-image: url('background5.jpg'); }
-    100% { background-image: url('background1.jpg'); }
-}
-
-.container {
-    margin-top: 50px;
-}
-
-h1 {
-    font-size: 3rem;
-    color: #ffd700;
-}
-
-p {
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-/* Gift Box Styling */
-.gift-box {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 50px auto;
-    cursor: pointer;
-}
-
-.gift-box .box {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, #FF0080, #FF8C00);
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 5px solid #fff;
-    border-radius: 10px;
-}
-
-.gift-box .lid {
-    width: 100px;
-    height: 20px;
-    background: linear-gradient(135deg, #FF0050, #FF9C00);
-    position: absolute;
-    top: -20px;
-    left: 0;
-    border: 5px solid #fff;
-    border-radius: 5px;
-    transition: top 0.5s ease;
-}
-
-.gift-box:hover .lid {
-    top: -50px;
-}
-
-.gift-box .smiley {
-    font-size: 2rem;
-    position: absolute;
-    top: 35px;
-    left: 25px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.gift-box:hover .smiley {
-    opacity: 1;
-}
-
-/* Party Poppers Confetti */
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
     background-color: #FF69B4;
-    animation: popper 1s forwards;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-@keyframes popper {
-    0% {
-        transform: translateY(0) scale(1);
-    }
-    100% {
-        transform: translateY(-300px) scale(1.5);
-    }
+.poem-btn:hover {
+    background-color: #FF1493;
 }
 
-/* Kannada Poem Pop-up */
+/* Style for the pop-up */
 .popup {
     display: none;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -117,8 +31,10 @@ p {
     margin: 15% auto;
     padding: 20px;
     width: 80%;
+    max-width: 600px;
     border-radius: 10px;
     text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
 .popup-content p {
