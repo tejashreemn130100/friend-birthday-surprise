@@ -1,10 +1,22 @@
+/* General Styling */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background: url('background1.jpg') no-repeat center center/cover;
+    animation: slidebg 30s infinite;
     text-align: center;
-    color: #333;
+    color: #fff;
+}
+
+/* Background Slideshow */
+@keyframes slidebg {
+    0% { background-image: url('background1.jpg'); }
+    20% { background-image: url('background2.jpg'); }
+    40% { background-image: url('background3.jpg'); }
+    60% { background-image: url('background4.jpg'); }
+    80% { background-image: url('background5.jpg'); }
+    100% { background-image: url('background1.jpg'); }
 }
 
 .container {
@@ -13,14 +25,64 @@ body {
 
 h1 {
     font-size: 3rem;
-    color: #ff4081;
+    color: #ffd700;
 }
 
 p {
     font-size: 1.5rem;
-    color: #333;
+    color: #fff;
 }
 
+/* Gift Box Styling */
+.gift-box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+.gift-box .box {
+    width: 100px;
+    height: 100px;
+    background-color: #ff4081;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
+
+.gift-box .lid {
+    width: 100px;
+    height: 20px;
+    background-color: #ff4081;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    transition: top 0.5s ease;
+}
+
+.gift-box:hover .lid {
+    top: -50px;
+}
+
+.gift-box .smiley {
+    font-size: 2rem;
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.gift-box:hover .smiley {
+    opacity: 1;
+}
+
+/* Extra Animation if you want falling hearts or confetti */
 .animation {
     position: fixed;
     width: 100%;
