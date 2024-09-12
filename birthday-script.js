@@ -1,15 +1,47 @@
-const body = document.body;
+// Function to create confetti
+function createConfetti(x, y) {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    confetti.style.left = `${x}px`;
+    confetti.style.top = `${y}px`;
+    confetti.style.backgroundColor = getRandomColor();
+    document.body.appendChild(confetti);
 
-function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.animationDuration = Math.random() * 2 + 3 + 's';
-    body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
+    setTimeout(() => confetti.remove(), 1000);
 }
 
-setInterval(createHeart, 300);
+// Generate random color for confetti
+function getRandomColor() {
+    const colors = ['#FF69B4', '#FFD700', '#8A2BE2', '#FF6347', '#00FF7F'];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+// Trigger confetti on hover
+const giftBox = document.getElementById('giftBox');
+giftBox.addEventListener('mouseover', function(event) {
+    for (let i = 0; i < 20; i++) {
+        setTimeout(() => createConfetti(event.pageX, event.pageY), i * 100);
+    }
+});
+
+// Kannada Poem Pop-up
+const showPoemBtn = document.getElementById('showPoemBtn');
+const poemPopup = document.getElementById('poemPopup');
+const closeBtn = document.querySelector('.close');
+
+// Show the pop-up when button is clicked
+showPoemBtn.addEventListener('click', function() {
+    poemPopup.style.display = 'block';
+});
+
+// Close the pop-up when 'x' is clicked
+closeBtn.addEventListener('click', function() {
+    poemPopup.style.display = 'none';
+});
+
+// Close the pop-up when clicked outside the content
+window.addEventListener('click', function(event) {
+    if (event.target === poemPopup) {
+        poemPopup.style.display = 'none';
+    }
+});
